@@ -1,7 +1,7 @@
 <?php
 
-$username = "+91" . $_GET["user"];
-$password = $_GET["pass"];
+$username = "+91" . $_GET['user'];
+$password = $_GET['pass'];
 
 $randroid = rand(pow(10, 16-1), pow(10, 16)-1);
 
@@ -26,19 +26,19 @@ $payload = array(
 
 $ch = curl_init();
 
-curl_setopt_array($ch, array(CURLOPT_URL, 'https://api.jio.com/v3/dip/user/unpw/verify',
-CURLOPT_POSTFIELDS, json_encode($payload),
-CURLOPT_USERAGENT, 'Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G930F Build/LMY48Z)',
-CURLOPT_HTTPHEADER, array(
-'Content-Type:application/json',
+curl_setopt_array($ch, array(CURLOPT_URL => 'https://api.jio.com/v3/dip/user/unpw/verify',
+CURLOPT_POSTFIELDS => json_encode($payload),
+CURLOPT_USERAGENT => 'Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G930F Build/LMY48Z)',
+CURLOPT_HTTPHEADER => array(
+'Content-Type: application/json',
 'x-api-key: l7xx938b6684ee9e4bbe8831a9a682b8e19f',
 'app-name: RJIL_JioTV'
 ),
-CURLOPT_AUTOREFERER, true,
-CURLOPT_RETURNTRANSFER, 1,
-CURLOPT_FOLLOWLOCATION, 1,
-CURLOPT_ENCODING, 'UTF-8',
-CURLOPT_TIMEOUT, 20
+CURLOPT_AUTOREFERER => true,
+CURLOPT_RETURNTRANSFER => 1,
+CURLOPT_FOLLOWLOCATION => 1,
+CURLOPT_ENCODING => 'UTF-8',
+CURLOPT_TIMEOUT => 20
 )
 );
 
@@ -47,10 +47,10 @@ curl_close($ch);
 
 $j = json_decode($result, true);
 
-$k = $j["ssoToken"];
-if ($k != "")
+$k = $j['ssoToken'];
+if ($k != '')
 {
 file_put_contents('creds.json', $result);
-echo "Logged in successfully!";
+echo 'Logged in successfully!';
 }
 ?>

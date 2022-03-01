@@ -1,5 +1,5 @@
 <?php
-$creds = json_decode(file_get_contents('creds.json') , true) or die('You\'re not logged in!');
+$creds = json_decode(file_get_contents('creds.json') , true);
 $ssoToken = $creds['ssoToken'];
 
 $jctBase = "cutibeau2ic";
