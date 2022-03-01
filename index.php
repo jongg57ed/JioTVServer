@@ -31,8 +31,9 @@ padding: 2px;
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<div class="input-group">
-<input type="text" class="form-control" id="channelSearch" placeholder="Search across 600+ channels">
+<div class="form-floating">
+<input type="text" class="form-control" id="channelSearch" placeholder="Search">
+<label for="channelSearch">Search</label>
 </div>
 </div>
 </div>
@@ -53,6 +54,7 @@ $language = $LANG_MAP[$channel['channelLanguageId']];
 $id = $channel['channel_id'];
 
 echo <<<CHANNELS
+
 <div class="card-parent col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-3">
 <div class="card border-primary h-100">
 <img class="lazyload card-img-top" data-src="https://jiotv.catchup.cdn.jio.com/dare_images/images/$logo">
@@ -67,6 +69,7 @@ CHANNELS;
 }
 
 echo <<<'FOOTER'
+
 </div>
 </div>
 </div>
