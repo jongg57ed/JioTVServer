@@ -1,0 +1,5 @@
+# Login credentials
+creds.json
+
+# Channels list (generated on first run anyway)
+channels.json
