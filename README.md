@@ -56,6 +56,7 @@ Huge thanks to the following people/projects that helped make this script what i
 - avipatilpro (base PHP script)
 - botallen (for Kodi plugin)
 - jeelpatel231 (helping with web play UI)
+- elvistony (for Python version of JioTVServer)
 
 ## Contributing
 
