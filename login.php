@@ -3,7 +3,7 @@
 $username = "+91" . $_GET['user'];
 $password = $_GET['pass'];
 
-$randroid = rand(pow(10, 16-1), pow(10, 16)-1);
+$randroid = bin2hex(random_bytes(8)));
 
 $payload = array(
 'identifier' => "$username",
