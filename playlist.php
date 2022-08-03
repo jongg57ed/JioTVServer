@@ -11,7 +11,7 @@ $dir = dirname($_SERVER['SCRIPT_NAME']);
 $id = $_GET['id'];
 
 echo <<<HEADER
-#EXTM3U x-tvg-url="https://github.com/mitthu786/tvepg/releases/download/latest/epg.xml.gz"
+#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/jiotv/epg.xml.gz"
 
 HEADER;
 
@@ -24,7 +24,7 @@ $logo = $channel['logoUrl'];
 $name = $channel['channel_name'];
 
 echo <<<CONTENT
-#EXTINF:-1 tvg-id="$id" group-title="$genre" tvg-language="$language" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/$logo", $name
+#EXTINF:-1 tvg-id="snehjio$id" group-title="$genre" tvg-language="$language" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/$logo", $name
 $protocol://$host$dir/autoq.php?id=$id
 
 
