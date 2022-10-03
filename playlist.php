@@ -24,7 +24,7 @@ $logo = $channel['logoUrl'];
 $name = $channel['channel_name'];
 
 echo <<<CONTENT
-#EXTINF:-1 tvg-id="snehjio$id" group-title="$genre" tvg-language="$language" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/$logo", $name
+#EXTINF:-1 tvg-id="$id" group-title="$genre" tvg-language="$language" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/$logo", $name
 $protocol://$host$dir/autoq.php?id=$id
 
 
